@@ -1,18 +1,17 @@
 * {
     font-family: monospace;
     font-size: 20px;
-    box-sizing: border-box;
 }
 
 body {
     margin: 0;
-    width: 100%;
-    min-height: 100%;
+    /* width: 100%; */
+    /* min-height: 100%; */
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    
+
     /* bg effect */
     background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
     background-size: 1800% 1800%;
@@ -26,12 +25,30 @@ body {
 }
 
 .contents {
+    background-image: url("../../imgs/theater.png");
+    background-position: 50%, 50%;
     border: 10px solid black;
     padding: 20px;
-    width: 40%;
-    max-width: 1200px;
+    width: 80%;
+    min-height: 800px;
+    /* height: 80%; */
+    max-width: 1600px;
     margin-top: 50px;
     background-color: white;
+}
+
+.color-change-header {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-transform: capitalize;
+    font-weight: 500;
+    display: inline-block;
+    position: relative;
+    font-size: 50px;
+    top: 125px;
+}
+
+.color-change-header:hover {    
+    animation: change-color 5s infinite;
 }
 
 .arrow {
@@ -41,6 +58,10 @@ body {
     margin-top: 50px;
     margin-bottom: 50px;
     animation: rotate 2s infinite linear;
+
+    position: relative;
+    right: 275px;
+    top: 120px;
 }
 
 #arrow-img {
@@ -61,15 +82,6 @@ body {
     100% { transform: rotate(360deg) }
 }
 
-.color-change {
-    font-size: 30px;
-    display: inline;
-}
-
-.color-change:hover {
-    animation: change-color 5s infinite;
-}
-
 @keyframes change-color {
     0%, 100% { 
         color: green; 
@@ -85,16 +97,16 @@ body {
     }
 }
 
-#accent-red:checked {
-    accent-color: red;
-}
+/* color: #c6dfe1 */
 
-#accent-blue:checked {
-    accent-color: blue;
-}
-
-#accent-green:checked {
-    accent-color: green;
+.weird-list-container {
+    display: inline-block;
+    position: relative;
+    left: 250px;
+    bottom: 85px;
+    border: 10px solid #a2b6b8;
+    border-radius: 5px;
+    background-color: #a2b6b8;
 }
 
 .weird-list-container .weird-list {
@@ -107,10 +119,11 @@ body {
     color: green; 
 }
 
-.weird-list-container {
-    display: inline-block;
-}
-
 .weird-list-container ~ div {
     color: blue;
+}
+
+#subtitle {
+    position: relative;
+    bottom: 75px;
 }

@@ -1,0 +1,92 @@
+.wide-radio-button {
+    position: relative;
+    opacity: 0;
+}
+
+.wide-radio-button:checked {
+    opacity: 1;
+}
+
+.radio-buttons-set-1 .wide-radio-button {
+    bottom: 135px;
+    transform: scaleX(3);
+}
+
+.radio-buttons-set-2 .wide-radio-button {
+    bottom: 106px;
+    transform: scaleX(3.5);
+}
+
+.radio-buttons-set-1 input[type="radio"]:nth-child(1n):checked,
+.radio-buttons-set-2 input[type="radio"]:nth-child(1n):checked
+{
+    accent-color: red;
+}
+
+.radio-buttons-set-1 input[type="radio"]:nth-child(2n):checked,
+.radio-buttons-set-2 input[type="radio"]:nth-child(2n):checked
+{
+    accent-color: green;
+}
+
+.radio-buttons-set-1 input[type="radio"]:nth-child(3n):checked,
+.radio-buttons-set-2 input[type="radio"]:nth-child(3n):checked
+{
+    accent-color: blue;
+}
+
+/* buttons set 1 */
+
+#button-1 {
+    right: 500px;
+}
+
+#button-2 {
+    right: 308px;
+}
+
+#button-3 {
+    right: 114px;
+}
+
+#button-4 {
+    left: 80px;
+}
+
+#button-5 {
+    left: 274px;
+}
+
+#button-6 {
+    left: 465px;
+}
+
+#button-7 {
+    left: 660px;
+}
+
+/* button set 2 */
+
+#button-8 {
+    right: 638px;
+}
+
+#button-9 {
+    right: 394px;
+}
+
+#button-10 {
+    right: 150px;
+}
+
+#button-11 {
+    left: 95px;
+}
+
+#button-12 {
+    left: 338px;
+}
+
+#button-13 {
+    left: 581px;
+}
