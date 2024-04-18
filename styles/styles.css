@@ -11,30 +11,132 @@ body {
     flex-direction: column;
     align-items: center;
     text-align: center;
-
-    /* bg effect */
-    background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
-    background-size: 1800% 1800%;
-    animation: rainbow 21s ease infinite;
+    overflow: hidden;
+    transition: background-color 0.3s; 
+    /* background: linear-gradient(to bottom, #007ced 1%,#cce7ff 100%); */
 }
 
-@keyframes rainbow { 
+.active-background-color {
+    background: linear-gradient(to bottom, #007ced 1%,#cce7ff 100%);
+}
+
+/* body {
+    transition: background-color 0.3s;
+} */
+
+/* @keyframes rainbow { 
     0%{background-position:0% 82%}
     50%{background-position:100% 19%}
     100%{background-position:0% 82%}
+} */
+
+.navbar {
+    position: absolute;
+    background-color: #135a9c;
+    width: 100%;
+    margin-top: 20px;
 }
 
-.contents {
-    background-image: url("../../imgs/theater.png");
-    background-position: 50%, 50%;
-    border: 10px solid black;
+.navbar li {
+    display: inline;
+}
+
+.navbar li a {
+    color: green;
+    font-size: 22px;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navbar li:nth-child(4) a {
+    color: pink;
+}
+
+.navbar li a:hover {
+    background-color: #0068ca;
+}
+
+.navbar ~ div {
+    color: blue;
+}
+
+#sun {
+    position: absolute;
+    right: 250px;
+    transform: scale(1.5);
+}
+
+#moon {
+    position: absolute;
+    left: 150px;
+    transform: scale(0.1);
+}
+
+#sun, #moon {
+    pointer-events: none; 
+}
+
+#sun-radio, #moon-radio {
+    display: block;
+    position: absolute;
+}
+
+/* TODO */
+
+/* #sun-radio:checked ~ body {
+    background: linear-gradient(to bottom, #007ced 1%,#cce7ff 100%);
+}
+
+#moon-radio:checked ~ body {
+    background: black;
+} */
+
+#sun-radio {
+    right: 396px;
+    top: 157px;
+    transform: scale(8.5);
+    z-index: 10;
+}
+
+#moon-radio {
+    left: 440px;
+    top: 290px;
+    transform: scale(5.5);
+    z-index: 10;
+}
+
+#sun-radio:checked, #moon-radio:checked {
+    opacity: 0;
+}
+
+#pre-title {
+    position: relative;
+    top: 175px;
+}
+
+.billboard {
+    background-image: url('../imgs/billboard.png');
+    background-size: 90% 125%;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
     padding: 20px;
-    width: 80%;
-    min-height: 800px;
+    height: 900.812px;
+    width: 1500px;
+    /* min-height: 900px; */
     /* height: 80%; */
     max-width: 1600px;
     margin-top: 50px;
-    background-color: white;
+    animation: wtf 2s infinite linear;
+}
+
+@keyframes wtf {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 .color-change-header {
@@ -44,7 +146,8 @@ body {
     display: inline-block;
     position: relative;
     font-size: 50px;
-    top: 125px;
+    top: 175px;
+    left: 17.5%;
 }
 
 .color-change-header:hover {    
@@ -55,13 +158,20 @@ body {
     font-size: 30px;
     margin: 0 auto;
     width: fit-content; 
-    margin-top: 50px;
-    margin-bottom: 50px;
-    animation: rotate 2s infinite linear;
-
     position: relative;
-    right: 275px;
-    top: 120px;
+    display: inline-block;
+}
+
+#arrow-1 {
+    right: 29%;
+    top: 25%;
+    animation: rotate 2s infinite linear;
+}
+
+#arrow-2 {
+    right: 0%;
+    top: 25%;
+    animation: reverse-rotate 2s infinite linear;
 }
 
 #arrow-img {
@@ -82,6 +192,11 @@ body {
     100% { transform: rotate(360deg) }
 }
 
+@keyframes reverse-rotate {
+    0% { transform: rotate(0deg) }
+    100% { transform: rotate(-360deg) }
+}
+
 @keyframes change-color {
     0%, 100% { 
         color: green; 
@@ -97,33 +212,39 @@ body {
     }
 }
 
-/* color: #c6dfe1 */
-
-.weird-list-container {
+.radio-buttons {
+    position: relative;
     display: inline-block;
-    position: relative;
-    left: 250px;
-    bottom: 85px;
-    border: 10px solid #a2b6b8;
-    border-radius: 5px;
-    background-color: #a2b6b8;
+    left: 400px;
+    bottom: 205px;
+    flex-direction: column; 
+    align-items: flex-start;
 }
 
-.weird-list-container .weird-list {
-    list-style-type: decimal;
-    margin: 0;
-    color: pink;
+.radio-button-group {
+    display: flex;
+    align-items: center; 
+    margin-bottom: 10px;
 }
 
-.weird-list-container .weird-list li:nth-child(4) {
-    color: green; 
+.color-red-button {
+    accent-color: red;
 }
 
-.weird-list-container ~ div {
-    color: blue;
+.color-blue-button {
+    accent-color: blue;
 }
 
-#subtitle {
-    position: relative;
-    bottom: 75px;
+.footer {
+    position: absolute;
+    display: inline-block;
+    background: #FAD5A5;
+    width: 100%;
+    bottom: -25px;
+
+}
+
+#copyright {
+    margin-top: 5px;
+    margin-bottom: 5px;
 }

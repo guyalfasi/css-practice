@@ -3,61 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spinning Arrow: The Movie</title>
+    <title>Spinning Arrow</title>
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="styles/radio-buttons.css">
     <link rel="icon" type="image/x-icon" href="imgs/3418886.ico">
 </head>
-<body>
-    <div class="contents">
-        <div class="color-change-header">
-            Spinning Arrow: The Movie
+<body class="active-background-color">
+    <div class="sun">
+        <input type="radio" id="sun-radio" class="color-red-button" name="options" value="option1">
+        <img id="sun" src="imgs/sun.png">
+    </div>
+    <div class="moon">
+        <input type="radio" id="moon-radio" class="color-blue-button" name="options" value="option2">
+        <img id="moon" src="imgs/moon.png">
+    </div>
+    <div class="billboard">
+        <div id="pre-title">
+            Are roller coasters not enough to keep your head spinning?
+            <br>
+            Spinning Arrow Industries™ present:
         </div>
 
-        <div class="arrow">
+        <div class="color-change-header">
+            Spinning Arrows™
+        </div>
+
+        <div id="arrow-1" class="arrow">
             <img id="arrow-img" src="imgs/arrow.png">
             <div class="text-inside">
                 dizzyness
             </div>
         </div>
 
-        <div class="weird-list-container">
-            <div id="the-five-guys">
-                Credits:
+        <div id="arrow-2" class="arrow">
+            <img id="arrow-img" src="imgs/arrow-2.png">
+            <div class="text-inside">
+                more dizzyness
             </div>
-            <ul class="weird-list">
-                <li>Guy</li>
-                <li>Ariel</li>
-                <li>Jonathan</li>
-                <li>Dan</li>
-                <li>Arik</li>
-            </ul>
-        </div>
-        
-        <div id="subtitle">
-            im blue da ba dee da ba di
-            <br />
-            (p.s: Hover the mouse on the title for a surprise)
         </div>
     </div>
-    <div class="radio-buttons">
-        <section class="radio-buttons-set-1">
-            <input type="radio" id="button-1" class="wide-radio-button color-red-button" name="chair-buttons">
-            <input type="radio" id="button-2" class="wide-radio-button color-green-button"  name="chair-buttons">
-            <input type="radio" id="button-3"  class="wide-radio-button color-blue-button" name="chair-buttons">
-            <input type="radio" id="button-4" class="wide-radio-button color-red-button" name="chair-buttons">
-            <input type="radio" id="button-5" class="wide-radio-button color-green-button"  name="chair-buttons">
-            <input type="radio" id="button-6"  class="wide-radio-button color-blue-button" name="chair-buttons">
-            <input type="radio" id="button-7" class="wide-radio-button color-red-button" name="chair-buttons">
-        </section>
-        <section class="radio-buttons-set-2">
-            <input type="radio" id="button-8" class="wide-radio-button color-red-button" name="chair-buttons">
-            <input type="radio" id="button-9" class="wide-radio-button color-green-button"  name="chair-buttons">
-            <input type="radio" id="button-10"  class="wide-radio-button color-blue-button" name="chair-buttons">
-            <input type="radio" id="button-11" class="wide-radio-button color-red-button" name="chair-buttons">
-            <input type="radio" id="button-12" class="wide-radio-button color-green-button"  name="chair-buttons">
-            <input type="radio" id="button-13"  class="wide-radio-button color-blue-button" name="chair-buttons">
-        </section>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="footer">
+        <p id="copyright">Copyright © 2023 Spinning Arrow Industries™. All rights reserved.</p>
     </div>
 </body>
 </html>
