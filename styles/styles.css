@@ -12,35 +12,6 @@ body {
     overflow: hidden;
 }
 
-.navbar {
-    position: absolute;
-    width: 100%;
-}
-
-.navbar li {
-    display: inline;
-}
-
-.navbar li a {
-    color: rgb(36, 239, 36);
-    font-size: 22px;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
-.navbar li:nth-child(4) a {
-    color: pink;
-}
-
-.navbar li a:hover {
-    background-color: #0068ca;
-}
-
-.navbar ~ div {
-    color: blue;
-}
-
 #sun {
     position: absolute;
     right: 250px;
@@ -58,21 +29,28 @@ body {
 }
 
 #sun-radio, #moon-radio {
-    display: block;
-    position: absolute;
+    display: block; 
+    position: absolute; 
+    appearance: none;  
+    width: 20px;  
+    height: 20px;  
+    border-radius: 50%;  
+    border: 2px solid white;  
+    background-color: white;  
+    cursor: pointer;  
 }
 
 #sun-radio {
     right: 388px;
-    top: 137px;
-    transform: scale(8);
+    top: 130px;
+    transform: scale(4.5);
     z-index: 10;
 }
 
 #moon-radio {
-    left: 440px;
-    top: 290px;
-    transform: scale(5.5);
+    left: 435px;
+    top: 287px;
+    transform: scale(3);
     z-index: 10;
 }
 
@@ -93,19 +71,12 @@ body {
     background: linear-gradient(to top, #283e51, #0a2342);
 }
 
-#sun-radio:checked ~ .navbar {
-    background: #007ced;
-}
-
-#moon-radio:checked ~ .navbar {
-    background: #0a2342;
-}
-
 .main-contents {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
     width: 100%;
+    height: 100vh;
 }
 
 .billboard {
@@ -119,6 +90,7 @@ body {
     max-width: 1600px;
     margin-top: 50px;
     animation: rotate 2s infinite linear;
+    z-index: 3;
 }
 
 .color-change-header {
@@ -212,12 +184,71 @@ body {
 .footer {
     position: absolute;
     display: inline-block;
-    background: #FAD5A5;
+    background: sandybrown;
     width: 100%;
+    height: 6%;
     bottom: 0;
 }
 
+#desert-background {    
+    position: absolute;
+    display: inline;
+    width: 100%;
+    bottom: 3%;
+    transform: scaleX(1.5);
+    z-index: 0;
+}
+
+.cactus {
+    position: absolute;
+    z-index: 2;
+}
+
+#cactus-1 {
+    transform: scale(0.2);
+    left: 10%;
+    bottom: -17%;
+}
+
+#cactus-2 {
+    transform: scale(0.3);
+    left: 72%;
+    bottom: -18%;
+}
+
+#cactus-3 {
+    transform: scale(0.1);
+    left: 91%;
+    bottom: -18%;
+}
+
+#cactus-4 {
+    transform: scale(0.2);
+    left: 80%;
+    bottom: -18%;
+}
+
+#cactus-5 {
+    transform: scale(0.2);
+    left: 42%;
+    bottom: -17%;
+}
+
+.cactuses li:nth-child(4) img {
+    filter: hue-rotate(260deg);
+}
+
+.cactuses ~ div {
+    color: blue;
+}
+
+#camel {
+    display: inline; 
+    position: absolute;
+    right: 10%;
+    bottom: -9%;
+}
+
 #copyright {
-    margin-top: 5px;
-    margin-bottom: 5px;
+    position: absolute;
 }
